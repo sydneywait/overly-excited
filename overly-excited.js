@@ -8,7 +8,8 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement (theWordArray) {
+//add option for user to change the punctuation
+function addExcitement (theWordArray, punctuation) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -23,7 +24,7 @@ function addExcitement (theWordArray) {
 
     
     if((i + 1) % 3 === 0){
-        buildMeUp = `${buildMeUp} ${sentence[i]}!`
+        buildMeUp = `${buildMeUp} ${sentence[i]}${punctuation}`
     }
     // Otherwise, just concatenate the word itself.
     else{
@@ -39,8 +40,8 @@ function addExcitement (theWordArray) {
 
 }
 
-// Invoke the function and pass in the array
-addExcitement(sentence)
+// Invoke the function and pass in the array.  User should add which punctuation or character they want to see 
+addExcitement(sentence, "?")
 
 
 console.log("***************Practice two-")
